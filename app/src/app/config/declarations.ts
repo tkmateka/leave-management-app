@@ -16,6 +16,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-common
+import { common } from '../sd-services/common';
 //CORE_REFERENCE_IMPORT-homeComponent
 import { homeComponent } from '../components/home.component';
 //CORE_REFERENCE_IMPORT-loginComponent
@@ -79,6 +81,8 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
+//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-common
+common,
   {
     provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true
   }

@@ -60,6 +60,7 @@ import {CdkStepperModule} from '@angular/cdk/stepper';
 import {CdkTableModule} from '@angular/cdk/table';
 import {TextFieldModule} from '@angular/cdk/text-field';
 import {CdkTreeModule} from '@angular/cdk/tree';
+import { UserIdleModule } from 'angular-user-idle';
 
 /**
  * adding the environments into the window object
@@ -130,5 +131,9 @@ export const appImportModules: any = [
 	CdkStepperModule,
 	CdkTableModule,
 	TextFieldModule,
-	CdkTreeModule
+	CdkTreeModule,
+    // Optionally you can set time for `idle`, `timeout` and `ping` in seconds.
+    // Default values: `idle` is 600 (10 minutes), `timeout` is 300 (5 minutes) 
+    // and `ping` is 120 (2 minutes).
+    UserIdleModule.forRoot({ idle: 10, timeout: 30, ping: 15 })
 ];

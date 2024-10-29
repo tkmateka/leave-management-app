@@ -1,3 +1,3 @@
 <div>
   {{page.users | json}}
-</div>
+</div><button mat-raised-button *ngIf="page.showStopTimer" (click)="stopTimer()">Stop Timer</button>

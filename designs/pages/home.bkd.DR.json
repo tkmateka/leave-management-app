@@ -211,5 +211,79 @@
                 }
             ]
         }
+    },
+    "c9b7fb99-f6cc-96eb-5442-dc12165566d0": {
+        "paletteKey": "NG-RaisedButton",
+        "commentid": null,
+        "designerReference": [
+            {
+                "_key": "style",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "class",
+                "_value": "",
+                "_type": "dav",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "buttonname",
+                "_value": "Stop Timer",
+                "_type": "a",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "_key": "color",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "(click)",
+                "_value": "stopTimer()",
+                "_type": "kv",
+                "_attrDef": "p",
+                "objValue": {
+                    "nodeID": "sd_gTWq0Mi3z7CxcjQo",
+                    "functionName": "stopTimer",
+                    "activeTree": "pages",
+                    "z": "sd_PXY1v88IWZS8BoNO",
+                    "input": []
+                }
+            },
+            {
+                "_key": "[disabled]",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "[disableRipple]",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "type",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "routerLink",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "*ngIf",
+                "_value": "page.showStopTimer",
+                "_type": "kv",
+                "_attrDef": "c"
+            }
+        ]
     }
 }

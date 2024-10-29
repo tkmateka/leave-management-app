@@ -1,0 +1,89 @@
+[
+    {
+        "id": "sd_Esk73iWZlTC4jXzt",
+        "type": "tab",
+        "createdDate": "2024-10-29T19:23:14.051Z",
+        "label": "common",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "tabType": "client",
+        "generateNext": true,
+        "serviceName": "common",
+        "relativeParentPath": ""
+    },
+    {
+        "id": "sd_YYqz9WroRFo4SgGa",
+        "type": "Start",
+        "z": "sd_Esk73iWZlTC4jXzt",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "logout",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "logout",
+        "category": "General",
+        "x": 125,
+        "y": 140,
+        "wires": [
+            [
+                "sd_iTaOWX7PC23F1fZc"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "common"
+    },
+    {
+        "id": "sd_iTaOWX7PC23F1fZc",
+        "type": "Storage",
+        "z": "sd_Esk73iWZlTC4jXzt",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "removeItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "accessToken"
+        },
+        "value": {},
+        "resultMapping": {},
+        "functionName": "sd_iTaOWX7PC23F1fZc",
+        "category": "Storage",
+        "x": 240,
+        "y": 140,
+        "wires": [
+            [
+                "sd_Po1jTBdzP8xspsKW"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "common",
+        "generated": true
+    },
+    {
+        "id": "sd_Po1jTBdzP8xspsKW",
+        "type": "Navigation",
+        "z": "sd_Esk73iWZlTC4jXzt",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/login",
+        "functionName": "sd_Po1jTBdzP8xspsKW",
+        "category": "Navigation",
+        "x": 360,
+        "y": 140,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "common",
+        "generated": true
+    }
+]
