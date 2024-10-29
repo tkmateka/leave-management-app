@@ -1,0 +1,134 @@
+[
+    {
+        "id": "sd_PXY1v88IWZS8BoNO",
+        "type": "tab",
+        "createdDate": "2024-10-29T13:54:53.442Z",
+        "label": "home",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_XN8AU08cYPkAHCIb",
+        "type": "OnInit",
+        "z": "sd_PXY1v88IWZS8BoNO",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_XN8AU08cYPkAHCIb",
+        "category": "Lifecycle Events",
+        "x": 105,
+        "y": 100,
+        "wires": [
+            [
+                "sd_sGrHPbixs7FpiDhj"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_dI9q9C9KOcRZkaIV",
+        "type": "Script",
+        "z": "sd_PXY1v88IWZS8BoNO",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "prepare role req obj",
+        "script": "bh.url = page.ssdUrl + 'users';",
+        "functionName": "prepareRoleReqObj",
+        "category": "Function",
+        "x": 365,
+        "y": 100,
+        "wires": [
+            [
+                "sd_6HU8hlAlYczxcqXq"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_sGrHPbixs7FpiDhj",
+        "type": "Environment",
+        "z": "sd_PXY1v88IWZS8BoNO",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "this.page",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_sGrHPbixs7FpiDhj",
+        "category": "General",
+        "x": 225,
+        "y": 100,
+        "wires": [
+            [
+                "sd_dI9q9C9KOcRZkaIV"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_6HU8hlAlYczxcqXq",
+        "type": "HttpRequest",
+        "z": "sd_PXY1v88IWZS8BoNO",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": ""
+        },
+        "resultMapping": "this.page.users",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "users"
+        },
+        "headerMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_6HU8hlAlYczxcqXq",
+        "category": "HTTP",
+        "x": 480,
+        "y": 100,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    }
+]

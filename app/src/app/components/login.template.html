@@ -1,0 +1,10 @@
+<form [formGroup]="page.loginForm">
+  <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+    <input matInput type="email" placeholder="Email" [required]="false" formControlName="email">
+
+  </mat-form-field>
+  <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+    <input matInput type="password" placeholder="Password" [required]="false" formControlName="password">
+
+  </mat-form-field><button mat-raised-button (click)="submit()" [disabled]="page.loginForm.invalid">Submit</button>
+</form>

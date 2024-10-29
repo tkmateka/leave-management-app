@@ -1,0 +1,14 @@
+{
+    "displayName": "leave-management-app",
+    "appName": "leave-management-app",
+    "description": "leave-management-app ui",
+    "lastModified": "2024-10-29T13:25:16.355Z",
+    "imgSourcePath": "",
+    "version": "1.0.0",
+    "appType": "uiOnly",
+    "templateName": "blank",
+    "createDate": "2024-10-29T13:24:19.939Z",
+    "analyticsId": "651e71b3-59b7-4703-9ba1-34597f8af395",
+    "createdStudioVersion": "9.2.3",
+    "oldAppName": "leave-management-app-ui"
+}

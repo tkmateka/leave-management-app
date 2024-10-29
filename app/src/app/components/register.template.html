@@ -1,0 +1,26 @@
+<form [formGroup]="page.registerForm">
+  <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+    <input matInput placeholder="First Name" [required]="false" formControlName="first_name">
+
+  </mat-form-field>
+  <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+    <input matInput placeholder="Last Name" [required]="false" formControlName="last_name">
+
+  </mat-form-field>
+  <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+    <input matInput type="email" placeholder="Email" [required]="false" formControlName="email">
+
+  </mat-form-field>
+  <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+    <input matInput type="password" placeholder="Password" [required]="false" formControlName="password">
+
+  </mat-form-field><mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+    <mat-label></mat-label>
+    <mat-select formControlName="role_id" placeholder="Roles" [required]="false">
+      <ng-template ngFor let-option [ngForOf]="page.roles" let-i="index">
+        <mat-option [value]="option.id">{{option.role_name}}</mat-option>
+      </ng-template>
+    </mat-select>
+
+  </mat-form-field><button mat-raised-button (click)="submit()" [disabled]="page.registerForm.invalid">Submit</button>
+</form>
